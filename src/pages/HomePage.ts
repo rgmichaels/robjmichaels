@@ -16,12 +16,15 @@ export class HomePage {
   }
 
   async assertHasText(expected: string) {
-    // Resilient text assertion (not tied to a brittle selector)
     const bodyText = await this.page.locator("body").innerText();
     if (!bodyText.includes(expected)) {
       throw new Error(
         `Expected page to contain the required text, but it was not found.\n\nMissing:\n${expected}`
       );
     }
+  }
+
+  async clickNavLink(linkName: "Resume" | "Portfolio" | "Contact") {
+    await this.page.getByRole("link", { name: linkName }).click();
   }
 }

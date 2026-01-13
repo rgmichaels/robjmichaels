@@ -4,56 +4,69 @@
     "elements": [
       {
         "description": "",
-        "id": "home-page;home-page-loads-and-displays-the-expected-summary-text",
+        "id": "home-page-navigation;resume-page-is-reachable-from-home-page",
         "keyword": "Scenario",
-        "line": 5,
-        "name": "Home page loads and displays the expected summary text",
+        "line": 4,
+        "name": "Resume page is reachable from home page",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 241166833
+              "duration": 242694667
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
-            "name": "I navigate to the home page",
+            "line": 5,
+            "name": "I am on the home page",
             "match": {
-              "location": "features/step-definitions/home.steps.ts:8"
+              "location": "features/step-definitions/navigation.steps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 394100541
+              "duration": 514148791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click the \"Resume\" link on the home page",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137396166
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "the home page should load successfully",
+            "name": "I should be on \"/resume\"",
             "match": {
-              "location": "features/step-definitions/home.steps.ts:13"
+              "location": "features/step-definitions/navigation.steps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 6641124
+              "duration": 242833
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "I should see the professional summary text",
+            "name": "the destination page should load",
             "match": {
-              "location": "features/step-definitions/home.steps.ts:18"
+              "location": "features/step-definitions/navigation.steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 14881667
+              "duration": 4605917
             }
           },
           {
@@ -61,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 18439292
+              "duration": 38538624
             }
           }
         ],
@@ -73,19 +86,191 @@
           {
             "name": "@smoke",
             "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page-navigation;portfolio-page-is-reachable-from-home-page",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Portfolio page is reachable from home page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 147081083
+            }
           },
           {
-            "name": "@regression",
-            "line": 4
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the home page",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 306283958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click the \"Portfolio\" link on the home page",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133079459
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should be on \"/portfolio\"",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the destination page should load",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4467957
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16490250
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page-navigation;contact-page-is-reachable-from-home-page",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Contact page is reachable from home page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 140907834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I am on the home page",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 292402000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I click the \"Contact\" link on the home page",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 324473791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I should be on \"/contact\"",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the destination page should load",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8299958
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19950207
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "home-page",
+    "id": "home-page-navigation",
     "line": 2,
     "keyword": "Feature",
-    "name": "Home page",
+    "name": "Home page navigation",
     "tags": [
       {
         "name": "@ui",
@@ -96,6 +281,6 @@
         "line": 1
       }
     ],
-    "uri": "features/home.feature"
+    "uri": "features/navigation.feature"
   }
 ]
