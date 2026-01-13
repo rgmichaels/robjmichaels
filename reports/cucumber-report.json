@@ -4,69 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "home-page-navigation;resume-page-is-reachable-from-home-page",
+        "id": "home-page-navigation;home-page-loads-and-displays-the-expected-summary-text",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "Resume page is reachable from home page",
+        "line": 5,
+        "name": "Home page loads and displays the expected summary text",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 242694667
+              "duration": 420817042
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "I am on the home page",
-            "match": {
-              "location": "features/step-definitions/navigation.steps.ts:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 514148791
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
             "line": 6,
-            "name": "I click the \"Resume\" link on the home page",
+            "name": "I navigate to the home page",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:12"
+              "location": "features/step-definitions/home.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 137396166
+              "duration": 331433792
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "I should be on \"/resume\"",
+            "name": "the home page should load successfully",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:22"
+              "location": "features/step-definitions/home.steps.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 242833
+              "duration": 4487290
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "the destination page should load",
+            "name": "I should see the professional summary text",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:27"
+              "location": "features/step-definitions/home.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 4605917
+              "duration": 17882207
             }
           },
           {
@@ -74,7 +61,95 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38538624
+              "duration": 19099707
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "home-page-navigation;resume-page-is-reachable-from-home-page",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Resume page is reachable from home page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 142754500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the home page",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 358562292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click the \"Resume\" link on the home page",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 136802874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should be on \"/resume\"",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 296583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the destination page should load",
+            "match": {
+              "location": "features/step-definitions/navigation.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31743625
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 63015750
             }
           }
         ],
@@ -94,7 +169,7 @@
         "description": "",
         "id": "home-page-navigation;portfolio-page-is-reachable-from-home-page",
         "keyword": "Scenario",
-        "line": 10,
+        "line": 16,
         "name": "Portfolio page is reachable from home page",
         "steps": [
           {
@@ -102,59 +177,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 147081083
+              "duration": 151770041
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 11,
+            "line": 17,
             "name": "I am on the home page",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 306283958
+              "duration": 285943750
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 12,
+            "line": 18,
             "name": "I click the \"Portfolio\" link on the home page",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 133079459
+              "duration": 149565416
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
+            "line": 19,
             "name": "I should be on \"/portfolio\"",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 209499
+              "duration": 125915
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 14,
+            "line": 20,
             "name": "the destination page should load",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 4467957
+              "duration": 7437750
             }
           },
           {
@@ -162,7 +237,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16490250
+              "duration": 13864125
             }
           }
         ],
@@ -182,7 +257,7 @@
         "description": "",
         "id": "home-page-navigation;contact-page-is-reachable-from-home-page",
         "keyword": "Scenario",
-        "line": 16,
+        "line": 22,
         "name": "Contact page is reachable from home page",
         "steps": [
           {
@@ -190,59 +265,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140907834
+              "duration": 142922291
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 17,
+            "line": 23,
             "name": "I am on the home page",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 292402000
+              "duration": 303834041
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
+            "line": 24,
             "name": "I click the \"Contact\" link on the home page",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 324473791
+              "duration": 139225041
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 19,
+            "line": 25,
             "name": "I should be on \"/contact\"",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 94624
+              "duration": 80791
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 20,
+            "line": 26,
             "name": "the destination page should load",
             "match": {
               "location": "features/step-definitions/navigation.steps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 8299958
+              "duration": 7306292
             }
           },
           {
@@ -250,7 +325,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 19950207
+              "duration": 17095000
             }
           }
         ],
