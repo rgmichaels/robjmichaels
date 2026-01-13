@@ -1,0 +1,42 @@
+name: E2E (Cucumber + Playwright)
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run E2E tests (Smoke by default)
+        env:
+          HEADLESS: "true"
+          BASE_URL: "https://www.robjmichaels.com"
+        run: npm run test:e2e -- --tags "@smoke and not @wip"
+
+      - name: Upload reports (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-reports
+          path: |
+            reports
+            test-results
