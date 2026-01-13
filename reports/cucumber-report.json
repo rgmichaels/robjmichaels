@@ -1,0 +1,101 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "home-page;home-page-loads-and-displays-the-expected-summary-text",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Home page loads and displays the expected summary text",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 241166833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the home page",
+            "match": {
+              "location": "features/step-definitions/home.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 394100541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the home page should load successfully",
+            "match": {
+              "location": "features/step-definitions/home.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6641124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I should see the professional summary text",
+            "match": {
+              "location": "features/step-definitions/home.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14881667
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 18439292
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "home-page",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Home page",
+    "tags": [
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "features/home.feature"
+  }
+]
