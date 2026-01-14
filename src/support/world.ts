@@ -1,5 +1,5 @@
 import { setWorldConstructor, World } from '@cucumber/cucumber';
-import type { Browser, BrowserContext, Page } from '@playwright/test';
+import type { Browser, BrowserContext, Page, Response } from '@playwright/test';
 
 import { SitePage } from '../pages/SitePage';
 import { ResumePage } from '../pages/ResumePage';
@@ -18,11 +18,23 @@ export class PWWorld extends World {
   contactPage!: ContactPage;
 
   /**
-   * Call this anytime page changes (e.g., popup/new tab)
-   * so all page objects point at the current Page.
+   * Stores the result of the most recent navigation.
+   * Used for performance and response assertions.
    */
-  bindPages(page: Page) {
+  lastNavigation?: {
+    durationMs: number;
+    status: number;
+    ok: boolean;
+    response: Response | null;
+  };
+
+  /**
+   * Rebind all page objects to the active Playwright Page.
+   * Call this whenever the page changes (e.g. popup / new tab).
+   */
+  bindPages(page: Page): void {
     this.page = page;
+
     this.sitePage = new SitePage(this.page);
     this.resumePage = new ResumePage(this.page);
     this.portfolioPage = new PortfolioPage(this.page);
