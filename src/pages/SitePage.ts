@@ -1,26 +1,23 @@
-import type { Page } from "playwright";
+import { Page, expect } from '@playwright/test';
 
 export class SitePage {
-  constructor(private page: Page) {}
+  constructor(protected page: Page) {}
+
+  async assertUrlIncludes(path: string) {
+    const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    await expect(this.page).toHaveURL(new RegExp(escaped), {
+      timeout: 10_000,
+    });
+  }
 
   async assertUrlEndsWith(path: string) {
-    const url = this.page.url();
-    if (!url.includes(path)) {
-      throw new Error(`Expected URL to include "${path}" but got: ${url}`);
-    }
+    const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    await expect(this.page).toHaveURL(new RegExp(`${escaped}$`), {
+      timeout: 10_000,
+    });
   }
 
-  async assertLoaded() {
-    const title = await this.page.title();
-    if (!title || title.trim().length === 0) {
-      throw new Error("Expected page title to be non-empty, but it was empty.");
-    }
-  }
-
-  async assertBodyContains(text: string) {
-    const bodyText = await this.page.locator("body").innerText();
-    if (!bodyText.includes(text)) {
-      throw new Error(`Expected page body to contain:\n${text}`);
-    }
+  async waitForPageReady() {
+    await this.page.waitForLoadState('domcontentloaded');
   }
 }

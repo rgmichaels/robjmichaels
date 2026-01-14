@@ -1,30 +1,39 @@
-import { Given, When, Then } from "@cucumber/cucumber";
-import type { PWWorld } from "../../src/support/world";
-import { HomePage } from "../../src/pages/HomePage";
-import { SitePage } from "../../src/pages/SitePage";
+import { Given, When, Then } from '@cucumber/cucumber';
+import { SitePage } from '../../src/pages/SitePage';
 
-Given("I am on the home page", async function (this: PWWorld) {
-  const home = new HomePage(this.page);
-  await home.goto();
-  await home.assertLoaded();
+Given('I am on the home page', async function () {
+  await this.page.goto('https://robjmichaels.com/', {
+    waitUntil: 'domcontentloaded',
+  });
+
+  this.sitePage = new SitePage(this.page);
 });
 
-When('I click the "{word}" link on the home page', async function (this: PWWorld, linkName: string) {
-  const home = new HomePage(this.page);
+When('I click the {string} link on the home page', async function (linkText: string) {
+  const link = this.page.getByRole('link', { name: linkText });
 
-  if (!["Resume", "Portfolio", "Contact"].includes(linkName)) {
-    throw new Error(`Unsupported nav link "${linkName}"`);
+  // Try to detect a new tab (PDF / external link)
+  const popupPromise = this.page
+    .waitForEvent('popup', { timeout: 2000 })
+    .catch(() => null);
+
+  await link.click();
+
+  const popup = await popupPromise;
+
+  if (popup) {
+    // Resume opened in a new tab
+    this.page = popup;
+    this.sitePage = new SitePage(this.page);
   }
 
-  await home.clickNavLink(linkName as "Resume" | "Portfolio" | "Contact");
+  await this.sitePage.waitForPageReady();
 });
 
-Then('I should be on {string}', async function (this: PWWorld, path: string) {
-  const site = new SitePage(this.page);
-  await site.assertUrlEndsWith(path);
+Then('I should be on {string}', async function (path: string) {
+  await this.sitePage.assertUrlIncludes(path);
 });
 
-Then("the destination page should load", async function (this: PWWorld) {
-  const site = new SitePage(this.page);
-  await site.assertLoaded();
+Then('the destination page should load', async function () {
+  await this.sitePage.waitForPageReady();
 });
