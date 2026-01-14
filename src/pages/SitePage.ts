@@ -1,23 +1,21 @@
-import { Page, expect } from '@playwright/test';
+import { Page } from '@playwright/test';
+import { BasePage } from './BasePage';
 
-export class SitePage {
-  constructor(protected page: Page) {}
-
-  async assertUrlIncludes(path: string) {
-    const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    await expect(this.page).toHaveURL(new RegExp(escaped), {
-      timeout: 10_000,
-    });
+export class SitePage extends BasePage {
+  constructor(page: Page) {
+    super(page);
   }
 
-  async assertUrlEndsWith(path: string) {
-    const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    await expect(this.page).toHaveURL(new RegExp(`${escaped}$`), {
-      timeout: 10_000,
-    });
+  async gotoHome() {
+    await this.page.goto('https://robjmichaels.com/', { waitUntil: 'domcontentloaded' });
   }
 
-  async waitForPageReady() {
-    await this.page.waitForLoadState('domcontentloaded');
+  navLink(name: 'Resume' | 'Portfolio' | 'Contact') {
+    return this.page.getByRole('link', { name });
+  }
+
+  async clickNav(name: 'Resume' | 'Portfolio' | 'Contact') {
+    await this.navLink(name).click();
+    await this.waitForReady();
   }
 }

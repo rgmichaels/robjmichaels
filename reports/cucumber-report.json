@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 577584083
+              "duration": 520302500
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 387320624
+              "duration": 1729957207
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6496834
+              "duration": 6825542
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 22438708
+              "duration": 20655291
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 24491874
+              "duration": 20752082
             }
           }
         ],
@@ -89,7 +89,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 142136417
+              "duration": 144364999
             }
           },
           {
@@ -102,7 +102,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 369764916
+              "duration": 1368240249
             }
           },
           {
@@ -111,11 +111,11 @@
             "line": 12,
             "name": "I click the \"Resume\" link on the home page",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:12"
+              "location": "features/step-definitions/navigation.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2009184208
+              "duration": 2003454582
             }
           },
           {
@@ -124,11 +124,11 @@
             "line": 13,
             "name": "I should be on \"/resume\"",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:33"
+              "location": "features/step-definitions/navigation.steps.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 28679165
+              "duration": 10951415
             }
           },
           {
@@ -137,11 +137,11 @@
             "line": 14,
             "name": "the destination page should load",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:37"
+              "location": "features/step-definitions/navigation.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 607667
+              "duration": 551042
             }
           },
           {
@@ -149,7 +149,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 18180500
+              "duration": 16892958
             }
           }
         ],
@@ -177,7 +177,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 144068041
+              "duration": 145956791
             }
           },
           {
@@ -190,7 +190,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 332636792
+              "duration": 1613083625
             }
           },
           {
@@ -199,11 +199,11 @@
             "line": 18,
             "name": "I click the \"Portfolio\" link on the home page",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:12"
+              "location": "features/step-definitions/navigation.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2005522292
+              "duration": 2004672249
             }
           },
           {
@@ -212,11 +212,11 @@
             "line": 19,
             "name": "I should be on \"/portfolio\"",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:33"
+              "location": "features/step-definitions/navigation.steps.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 11165541
+              "duration": 8050999
             }
           },
           {
@@ -225,11 +225,11 @@
             "line": 20,
             "name": "the destination page should load",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:37"
+              "location": "features/step-definitions/navigation.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 427583
+              "duration": 496541
             }
           },
           {
@@ -237,7 +237,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17082625
+              "duration": 16958500
             }
           }
         ],
@@ -265,7 +265,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 142398791
+              "duration": 146518791
             }
           },
           {
@@ -278,7 +278,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 298889166
+              "duration": 1741314041
             }
           },
           {
@@ -287,11 +287,11 @@
             "line": 24,
             "name": "I click the \"Contact\" link on the home page",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:12"
+              "location": "features/step-definitions/navigation.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2007288042
+              "duration": 2002474666
             }
           },
           {
@@ -300,11 +300,11 @@
             "line": 25,
             "name": "I should be on \"/contact\"",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:33"
+              "location": "features/step-definitions/navigation.steps.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 24535582
+              "duration": 7657540
             }
           },
           {
@@ -313,11 +313,11 @@
             "line": 26,
             "name": "the destination page should load",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:37"
+              "location": "features/step-definitions/navigation.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 1079208
+              "duration": 626791
             }
           },
           {
@@ -325,7 +325,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 19106541
+              "duration": 16379249
             }
           }
         ],
