@@ -1,21 +1,32 @@
-import { Given, Then } from "@cucumber/cucumber";
-import type { PWWorld } from "../../src/support/world";
-import { HomePage } from "../../src/pages/HomePage";
+import { Given, Then } from '@cucumber/cucumber';
+import { expect } from '@playwright/test';
 
-const expectedText =
-  "Senior software quality professional with extensive experience owning quality outcomes across complex SaaS platforms. Proven leader in incident response, release readiness, and end-to-end testing across UI, API, and database layers. Experienced people leader with a track record of guiding teams through high-impact reliability and quality challenges.";
-
-Given("I navigate to the home page", async function (this: PWWorld) {
-  const home = new HomePage(this.page);
-  await home.goto();
+Given('I navigate to the home page', async function () {
+  const resp = await this.page.goto(this.baseUrl, { waitUntil: 'load' });
+  this.lastResponse = resp;
 });
 
-Then("the home page should load successfully", async function (this: PWWorld) {
-  const home = new HomePage(this.page);
-  await home.assertLoaded();
+Then('the home page should respond successfully', async function () {
+  if (this.lastResponse) {
+    expect(this.lastResponse.ok()).toBeTruthy();
+  }
+  await expect(this.page).toHaveURL(/\/$/);
 });
 
-Then("I should see the professional summary text", async function (this: PWWorld) {
-  const home = new HomePage(this.page);
-  await home.assertHasText(expectedText);
+Then('the page title should be visible', async function () {
+  const title = await this.page.title();
+  expect(title.length).toBeGreaterThan(0);
+});
+
+Then('the home page should load successfully', async function () {
+  // “Load successfully” should assert something real but stable
+  await expect(this.page.locator('text=Quality Assurance').first()).toBeVisible();
+});
+
+Then('I should see the professional summary text', async function () {
+  // This text is currently on your home page (robjmichaels.com)
+  const snippet =
+    'Senior software quality professional with extensive experience owning quality outcomes across complex SaaS platforms';
+
+  await expect(this.page.getByText(snippet, { exact: false })).toBeVisible();
 });

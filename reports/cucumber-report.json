@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 272303916
+              "duration": 564231042
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 6,
             "name": "I navigate to the contact page",
             "match": {
-              "location": "features/step-definitions/contact.steps.ts:21"
+              "location": "features/step-definitions/contact.steps.ts:4"
             },
             "result": {
               "status": "passed",
-              "duration": 344322917
+              "duration": 528445333
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 7,
             "name": "the contact page should respond successfully",
             "match": {
-              "location": "features/step-definitions/contact.steps.ts:25"
+              "location": "features/step-definitions/contact.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1819583
+              "duration": 61441749
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 8,
             "name": "the contact page should load in under 2 seconds",
             "match": {
-              "location": "features/step-definitions/contact.steps.ts:37"
+              "location": "features/step-definitions/contact.steps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 268792
+              "duration": 485999
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 9,
             "name": "I should see my contact details on the contact page",
             "match": {
-              "location": "features/step-definitions/contact.steps.ts:46"
+              "location": "features/step-definitions/contact.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 28213250
+              "duration": 9614291
             }
           },
           {
@@ -74,17 +74,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17063125
+              "duration": 21123082
             }
           }
         ],
         "tags": [
           {
             "name": "@ui",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
             "line": 1
           }
         ],
@@ -98,10 +94,6 @@
     "tags": [
       {
         "name": "@ui",
-        "line": 1
-      },
-      {
-        "name": "@smoke",
         "line": 1
       }
     ],
@@ -122,7 +114,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 154243375
+              "duration": 156212042
             }
           },
           {
@@ -131,11 +123,11 @@
             "line": 6,
             "name": "I navigate to the home page",
             "match": {
-              "location": "features/step-definitions/home.steps.ts:8"
+              "location": "features/step-definitions/home.steps.ts:4"
             },
             "result": {
               "status": "passed",
-              "duration": 279804000
+              "duration": 557810875
             }
           },
           {
@@ -144,11 +136,11 @@
             "line": 7,
             "name": "the home page should load successfully",
             "match": {
-              "location": "features/step-definitions/home.steps.ts:13"
+              "location": "features/step-definitions/home.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 2714457
+              "duration": 15827166
             }
           },
           {
@@ -157,11 +149,11 @@
             "line": 8,
             "name": "I should see the professional summary text",
             "match": {
-              "location": "features/step-definitions/home.steps.ts:18"
+              "location": "features/step-definitions/home.steps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 20489000
+              "duration": 2126249
             }
           },
           {
@@ -169,17 +161,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13034959
+              "duration": 18777165
             }
           }
         ],
         "tags": [
           {
             "name": "@ui",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
             "line": 1
           }
         ],
@@ -197,7 +185,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 160478791
+              "duration": 150548874
             }
           },
           {
@@ -210,7 +198,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 338117041
+              "duration": 402797333
             }
           },
           {
@@ -219,11 +207,11 @@
             "line": 12,
             "name": "I click the \"Resume\" link on the home page",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:8"
+              "location": "features/step-definitions/navigation.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 2010102334
+              "duration": 149889875
             }
           },
           {
@@ -232,11 +220,11 @@
             "line": 13,
             "name": "I should be on \"/resume\"",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:25"
+              "location": "features/step-definitions/navigation.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 15199832
+              "duration": 69416750
             }
           },
           {
@@ -245,11 +233,11 @@
             "line": 14,
             "name": "the destination page should load",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:30"
+              "location": "features/step-definitions/navigation.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 707292
+              "duration": 1912915
             }
           },
           {
@@ -257,17 +245,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 19808707
+              "duration": 16570833
             }
           }
         ],
         "tags": [
           {
             "name": "@ui",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
             "line": 1
           }
         ],
@@ -285,7 +269,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 141911583
+              "duration": 147891375
             }
           },
           {
@@ -298,7 +282,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 267862250
+              "duration": 482427542
             }
           },
           {
@@ -307,11 +291,11 @@
             "line": 18,
             "name": "I click the \"Portfolio\" link on the home page",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:8"
+              "location": "features/step-definitions/navigation.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 2004763582
+              "duration": 174560832
             }
           },
           {
@@ -320,11 +304,11 @@
             "line": 19,
             "name": "I should be on \"/portfolio\"",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:25"
+              "location": "features/step-definitions/navigation.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 18562917
+              "duration": 30463125
             }
           },
           {
@@ -333,11 +317,11 @@
             "line": 20,
             "name": "the destination page should load",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:30"
+              "location": "features/step-definitions/navigation.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 1038500
+              "duration": 1308708
             }
           },
           {
@@ -345,17 +329,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20385332
+              "duration": 16440624
             }
           }
         ],
         "tags": [
           {
             "name": "@ui",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
             "line": 1
           }
         ],
@@ -373,7 +353,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 158564083
+              "duration": 153445917
             }
           },
           {
@@ -386,7 +366,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 321049500
+              "duration": 487604334
             }
           },
           {
@@ -395,11 +375,11 @@
             "line": 24,
             "name": "I click the \"Contact\" link on the home page",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:8"
+              "location": "features/step-definitions/navigation.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 2005098583
+              "duration": 153414874
             }
           },
           {
@@ -408,11 +388,11 @@
             "line": 25,
             "name": "I should be on \"/contact\"",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:25"
+              "location": "features/step-definitions/navigation.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 8876082
+              "duration": 34044792
             }
           },
           {
@@ -421,11 +401,11 @@
             "line": 26,
             "name": "the destination page should load",
             "match": {
-              "location": "features/step-definitions/navigation.steps.ts:30"
+              "location": "features/step-definitions/navigation.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 599625
+              "duration": 1571249
             }
           },
           {
@@ -433,17 +413,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 15258082
+              "duration": 15821334
             }
           }
         ],
         "tags": [
           {
             "name": "@ui",
-            "line": 1
-          },
-          {
-            "name": "@smoke",
             "line": 1
           }
         ],
@@ -457,10 +433,6 @@
     "tags": [
       {
         "name": "@ui",
-        "line": 1
-      },
-      {
-        "name": "@smoke",
         "line": 1
       }
     ],
@@ -481,7 +453,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 159683750
+              "duration": 155357250
             }
           },
           {
@@ -494,7 +466,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 328352124
+              "duration": 327038709
             }
           },
           {
@@ -507,7 +479,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15975540
+              "duration": 17318874
             }
           },
           {
@@ -520,7 +492,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 462750
+              "duration": 320999
             }
           },
           {
@@ -533,7 +505,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8964249
+              "duration": 8403374
             }
           },
           {
@@ -546,7 +518,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4687458
+              "duration": 7708041
             }
           },
           {
@@ -554,7 +526,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13157833
+              "duration": 18680833
             }
           }
         ],
@@ -586,5 +558,92 @@
       }
     ],
     "uri": "features/portfolio.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "home-page-smoke-test;home-page-loads-successfully",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Home page loads successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 150168207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to the home page",
+            "match": {
+              "location": "features/step-definitions/home.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 327637958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the home page should respond successfully",
+            "match": {
+              "location": "features/step-definitions/home.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16825208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the page title should be visible",
+            "match": {
+              "location": "features/step-definitions/home.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1290457
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16422792
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "home-page-smoke-test",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Home page smoke test",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
+    "uri": "features/smoke/homepage.feature"
   }
 ]

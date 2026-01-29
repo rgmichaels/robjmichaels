@@ -1,21 +1,23 @@
 import { Before, After } from '@cucumber/cucumber';
 import { chromium } from '@playwright/test';
-import type { PWWorld } from './world';
 
-Before(async function (this: PWWorld) {
-  this.browser = await chromium.launch({
-    headless: true, // set false for local debug
-  });
+Before(async function () {
+  const baseUrl = process.env.BASE_URL;
+  if (!baseUrl) {
+    throw new Error(
+      'BASE_URL env var is required. Example:\n' +
+        '  BASE_URL=https://robjmichaels.com npx cucumber-js --tags "@smoke"'
+    );
+  }
 
+  this.baseUrl = baseUrl;
+
+  this.browser = await chromium.launch({ headless: true });
   this.context = await this.browser.newContext();
-  const page = await this.context.newPage();
-
-  // Bind world + page objects
-  this.bindPages(page);
+  this.page = await this.context.newPage();
 });
 
-After(async function (this: PWWorld) {
-  // Close in reverse order, safely
+After(async function () {
   await this.page?.close().catch(() => {});
   await this.context?.close().catch(() => {});
   await this.browser?.close().catch(() => {});

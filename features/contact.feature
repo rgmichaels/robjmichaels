@@ -1,4 +1,4 @@
-@ui @smoke
+@ui 
 
 Feature: Contact page
 

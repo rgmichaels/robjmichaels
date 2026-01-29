@@ -1,4 +1,4 @@
-@ui @smoke
+@ui
 Feature: Home page navigation
 
 

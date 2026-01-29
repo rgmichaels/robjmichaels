@@ -1,32 +1,26 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import type { PWWorld } from '../../src/support/world';
+import { expect } from '@playwright/test';
 
-Given('I am on the home page', async function (this: PWWorld) {
-  await this.sitePage.gotoHome();
+Given('I am on the home page', async function () {
+  const resp = await this.page.goto(this.baseUrl, { waitUntil: 'load' });
+  this.lastResponse = resp;
+
+  if (resp) expect(resp.ok()).toBeTruthy();
 });
 
-When('I click the {string} link on the home page', async function (this: PWWorld, linkText: string) {
-  const link = this.page.getByRole('link', { name: linkText });
-
-  // If link opens a new tab, capture it; otherwise continue in same tab
-  const popupPromise = this.page.waitForEvent('popup', { timeout: 2000 }).catch(() => null);
-
-  await link.click();
-
-  const popup = await popupPromise;
-  if (popup) {
-    await popup.waitForLoadState('domcontentloaded');
-    this.bindPages(popup); // <-- critical: rebind page objects to the new tab
-  } else {
-    await this.page.waitForLoadState('domcontentloaded');
-  }
+When('I click the {string} link on the home page', async function (linkText: string) {
+  // Use accessible role-based click (stable for nav links)
+  await this.page.getByRole('link', { name: linkText, exact: true }).click();
 });
 
-Then('I should be on {string}', async function (this: PWWorld, path: string) {
-  // Keep generic: asserts URL contains the expected fragment
-  await this.sitePage.assertUrlIncludes(path);
+Then('I should be on {string}', async function (path: string) {
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  await expect(this.page).toHaveURL(new RegExp(`${normalized.replace('/', '\\/')}/?$`));
 });
 
-Then('the destination page should load', async function (this: PWWorld) {
-  await this.sitePage.waitForReady();
+Then('the destination page should load', async function () {
+  // Basic signal that page content exists and load completed
+  await this.page.waitForLoadState('domcontentloaded');
+  const title = await this.page.title();
+  expect(title.length).toBeGreaterThan(0);
 });
