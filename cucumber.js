@@ -8,6 +8,11 @@ module.exports = {
     "--require",
     "src/support/**/*.ts",
 
+    // NEW location for migrated step definitions
+    "--require",
+    "src/steps/**/*.ts",
+
+    // OLD location (keep while migrating one-by-one)
     "--require",
     "features/step-definitions/**/*.ts",
 
