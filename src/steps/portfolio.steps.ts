@@ -1,6 +1,6 @@
 import { Given, Then } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
-import type { PWWorld } from "../../src/support/world";
+import type { PWWorld } from "../support/world";
 
 const PORTFOLIO_PATH = "/portfolio";
 const MAX_LOAD_MS = 2000;
